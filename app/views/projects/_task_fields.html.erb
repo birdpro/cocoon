@@ -1,7 +1,11 @@
 <div class='nested-fields'>
-  <%= f.inputs do %>
-    <%= f.input :description %>
-    <%= f.input :done, :as => :boolean %>
-    <%= link_to_remove_association "remove task", f %>
-  <% end %>
+<div class="field">
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+</div>
+<div class="field">
+  <%= f.check_box :done %>
+  <%= f.label :done %>
+</div>
+<%= link_to_remove_association "remove task", f %>
 </div>
